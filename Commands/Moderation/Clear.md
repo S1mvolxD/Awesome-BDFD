@@ -17,3 +17,37 @@ version: "1.0"
 !clear <количество>
 !clear 50
 ```
+
+## 🚀 Installation
+### ⚙️ Prefix version
+```bdscript
+$nomention
+$if[$checkUserPerms[$authorID;managemessages]==false]
+  $title[❌ Missing permissions]
+  $description[<@$authorID> You are missing the `manage messages` permission]
+  $color[#ff0000]
+  $deleteIn[3s]
+  $stop
+$endif
+$if[$checkUserPerms[$botID;managemessages]==false]
+  $title[❌ Missing permissions]
+  $description[<@$authorID>, I am missing the `manage messages` permission]
+  $color[#ff0000]
+  $deleteIn[3s]
+  $stop
+$endif
+$if[$isNumber[$message]==true]
+  $title[❌ Argument error]
+  $description[<@$authorID>, You provided an invalid number]
+  $color[#ff0000]
+  $deleteIn[3s]
+  $stop
+$endif
+
+$title[✅ Messages Cleared]
+$description[Successfully deleted: `$message` messages]
+$color[#00FF00]
+$deleteIn[3s]
+$deletecommand
+$clear[$message]
+```
