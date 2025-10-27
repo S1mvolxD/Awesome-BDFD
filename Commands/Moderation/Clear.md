@@ -20,7 +20,7 @@ version: "1.0"
 
 ## 🚀 Installation
 ### ⚙️ Prefix version
-```bdscript
+```swift
 $nomention
 $if[$checkUserPerms[$authorID;managemessages]==false]
   $title[❌ Missing permissions]
@@ -50,4 +50,31 @@ $color[#00FF00]
 $deleteIn[3s]
 $deletecommand
 $clear[$message]
+```
+
+### ⚙️ Slash version
+```swift
+$nomention
+$if[$isSlash==true]
+$if[$checkUserPerms[$authorID;managemessages]==false]
+  $ephemeral
+  $title[❌ Missing permissions]
+  $description[<@$authorID> You are missing the `manage messages` permission]
+  $color[#ff0000]
+  $stop
+$endif
+$if[$checkUserPerms[$botID;managemessages]==false]
+  $ephemeral
+  $title[❌ Missing permissions]
+  $description[<@$authorID>, I am missing the `manage messages` permission]
+  $color[#ff0000]
+  $stop
+$endif
+
+$title[✅ Messages Cleared]
+$description[Successfully deleted: `$message[number]` messages]
+$color[#00FF00]
+$deleteIn[3s]
+$clear[$message[number]]
+$endif
 ```
