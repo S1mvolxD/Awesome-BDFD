@@ -14,6 +14,12 @@ version: "1.0"
 
 ---
 
+# 💡 Features
+
+- ✅ Deletes up to 100 messages at a time
+- ⚠️ Does not work with messages older than 14 days
+- 🔒 Requires the "Manage Messages" permission
+  
 ## 📋 Basic information
 
 ### Prefix command
