@@ -18,6 +18,22 @@ version: "1.0"
 !clear 50
 ```
 
+---
+
+## 📋 Basic information
+
+### Prefix command
+- **Trigger:** `{your_prefix}purge`
+- **Usage:** `{your_prefix}purge [количество]`
+- **Required rights:** `Manage Messages` (For the user and the bot)
+
+### Slash command
+- **Option:** `number` (required)
+- **Type:** Number
+- **Limits:** 1-1000 messages
+
+---
+
 ## 🚀 Installation
 ### ⚙️ Prefix version
 ```swift
