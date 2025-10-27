@@ -12,19 +12,13 @@ version: "1.0"
 
 `Quickly deletes the specified number of messages in the current channel.`
 
-## 🎯 Using
-```bash
-!clear <количество>
-!clear 50
-```
-
 ---
 
 ## 📋 Basic information
 
 ### Prefix command
 - **Trigger:** `{your_prefix}purge`
-- **Usage:** `{your_prefix}purge [количество]`
+- **Usage:** `{your_prefix}purge [number]`
 - **Required rights:** `Manage Messages` (For the user and the bot)
 
 ### Slash command
